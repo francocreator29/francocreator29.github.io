@@ -1,66 +1,86 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Industry News | FrancoCreator</title>
+    <title>Geronimo Franco | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="portfolio-header">
         <div class="container">
-            <h1>IT Industry News</h1>
-            <p class="subtitle">Latest Information from the World's Leading IT Industry</p>
+            <div class="profile-img">
+                <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Geronimo Franco" />
+            </div>
+            <h1>Geronimo Franco</h1>
+            <p class="subtitle">Web Developer & IT Enthusiast</p>
+            <nav class="portfolio-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
     <main>
-        <section id="latest-news" class="container">
-            <h2>Latest IT News</h2>
-            <div id="news-list">
-                <!-- News articles will be injected here by script.js -->
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Geronimo Franco, a passionate web developer with a love for creating modern, responsive websites and applications. I enjoy solving problems, learning new technologies, and collaborating on exciting projects.</p>
+            <p><strong>Education:</strong> CyberTex Institute of Technology</p>
+            <p><strong>Major:</strong> Network Engineering</p>
+            <p>As a Network Engineering major, I have developed a strong foundation in designing, implementing, and managing complex network infrastructures. My coursework and hands-on experience have equipped me with expertise in network security, cloud technologies, and troubleshooting. I am passionate about building secure, scalable, and high-performance networks that empower organizations to thrive in the digital age. My education at CyberTex Institute of Technology has fostered my analytical thinking, problem-solving skills, and commitment to staying current with the latest advancements in IT and networking.</p>
+        </section>
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>Git & GitHub</span>
+                <span>Responsive Design</span>
             </div>
         </section>
-        <section id="trends" class="container">
-            <h2>Current Trends</h2>
-            <ul>
-                <li>Artificial Intelligence & Machine Learning</li>
-                <li>Cloud Computing & Edge Computing</li>
-                <li>Cybersecurity Innovations</li>
-                <li>Quantum Computing</li>
-                <li>5G & Next-Gen Connectivity</li>
-            </ul>
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A modern, responsive portfolio to showcase my work and skills.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Task Manager App</h3>
+                    <p>A web application to manage daily tasks efficiently using React and Node.js.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather dashboard built with JavaScript and OpenWeather API.</p>
+                </div>
+            </div>
         </section>
-        <section id="leaders" class="container">
-            <h2>Industry Leaders</h2>
-            <div class="leaders-list">
-                <div class="leader-card">
-                    <h3>Microsoft</h3>
-                    <p>Cloud, AI, Enterprise Solutions</p>
-                </div>
-                <div class="leader-card">
-                    <h3>Google</h3>
-                    <p>Search, Cloud, AI, Quantum</p>
-                </div>
-                <div class="leader-card">
-                    <h3>Amazon</h3>
-                    <p>Cloud (AWS), E-commerce, AI</p>
-                </div>
-                <div class="leader-card">
-                    <h3>Apple</h3>
-                    <p>Consumer Tech, Security, Innovation</p>
-                </div>
-                <div class="leader-card">
-                    <h3>IBM</h3>
-                    <p>Quantum, AI, Enterprise IT</p>
-                </div>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-links">
+                <a href="mailto:geronimo.franco@email.com">Email</a>
+                <a href="https://github.com/francocreator29" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/geronimofranco" target="_blank">LinkedIn</a>
             </div>
         </section>
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2025 FrancoCreator IT News. All rights reserved.</p>
+            <p>&copy; 2025 Geronimo Franco. All rights reserved.</p>
         </div>
     </footer>
     <script src="script.js"></script>
