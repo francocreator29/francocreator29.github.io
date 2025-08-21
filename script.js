@@ -1,30 +1,29 @@
+const toggleBtn = document.getElementById("darkModeToggle");
+const body = document.body;
+const typingSpan = document.getElementById("typing");
 
+// Dark Mode Load Preference
+if (localStorage.getItem("dark-mode") === "true") {
+  body.classList.add("dark-mode");
+  toggleBtn.textContent = "☀️";
+}
 
-// Smooth scroll for navigation links
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.portfolio-nav a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 40,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-    // Contact form submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for reaching out! I will get back to you soon.');
-            contactForm.reset();
-        });
-    }
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDark = body.classList.contains("dark-mode");
+  toggleBtn.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("dark-mode", isDark);
 });
+
+// Typing Animation for tagline
+const text = "Future Network & Cloud Engineer";
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    typingSpan.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 100);
+  }
+}
+document.addEventListener("DOMContentLoaded", typeEffect);
